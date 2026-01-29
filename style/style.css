@@ -1,0 +1,302 @@
+/* ===== Fonts ===== */
+@font-face {
+font-family: "Raleway";
+src: url("../resource/fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: "Inter";
+src: url("../resource/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+font-weight: 700;
+font-style: normal;
+}
+body {
+font-family: 'Raleway', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* ===== Header ===== */
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fff;
+width: 1151px;
+height: 25.18px;
+margin-left: 125px;
+margin-right: 124px;
+margin-top: 32.8px;
+}
+.header__logo {
+width: 126.89px;
+height: 21.42px;
+}
+.header__nav {
+display: flex;
+margin-left: 650px;
+}
+.header__btn {
+font-family: monospace;
+font-weight: 400;
+font-size: 18px;
+font-style:normal;
+line-height: 100%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+border: none;
+background-color: #fff;
+cursor: pointer;
+text-decoration: none; /* убрать подчеркивание */
+color: black;          /* цвет текста */
+display: inline-block; /* чтобы padding работал */
+padding: 5px 10px;     /* добавляем отступ */
+transition: color 0.3s;
+}
+.header .header__nav .header__btn:hover {
+color: #999;
+text-decoration: underline;
+}
+/* ===== Hero ===== */
+.hero {
+margin-left: 125px;
+margin-top: 70px;
+}
+.hero__title {
+font-size: 60px;
+line-height: 60px;
+font-weight: 400;
+font-style: normal;
+color: black;
+letter-spacing: 0.03em;
+width: 100%;
+height: 120px;
+}
+/* ===== Banner (картинка с текстом) ===== */
+.banner {
+position: relative;
+max-width: 1150px;
+margin-left: 125px;
+margin-top: 20px;
+}
+.banner__img {
+width: 1150px;
+height: 500px;
+display: block;
+}
+.banner__text {
+position: absolute;
+bottom: 20px;
+left: 20px;
+width: 430px;
+height: 121px;
+padding: 20px;
+box-sizing: border-box;
+font-size: 18px;
+line-height: 20px;
+letter-spacing: 0.03em;
+color: white;
+background: rgba(0,0,0,0.3);
+}
+/* ===== About ===== */
+.about {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin-left: 125px;
+margin-top: 40px;
+max-width: 800px;
+}
+.about__title {
+font-size: 28px;
+font-weight: 700;
+}
+.about__text {
+font-size: 18px;
+line-height: 25px;
+}
+.about__btn {
+padding: 12px 24px;
+font-size: 18px;
+border: none;
+cursor: pointer;
+width: fit-content;
+}
+.about__btn--red {
+background-color: red;
+color: white;
+}
+/* ===== Projects ===== */
+.projects {
+max-width: 1150px;
+margin-left: 125px;
+margin-top: 40px;
+}
+.projects__title {
+font-size: 28px;
+font-weight: 700;
+}
+.projects__item {
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-top: 20px;
+}
+.projects__img {
+width: 100%;
+height: 450px;
+}
+.projects__text {
+font-size: 18px;
+}
+.projects__btn {
+width: 127px;
+height: 27px;
+left: 125px;
+background-color: #fff;
+color: red;
+border: none;
+font-size: 16px;
+cursor: pointer;
+}
+.projects__btn_big{
+align-items:center ;
+margin-top: 60px;
+width: 100%;
+padding: 30px;
+font-size: 30px;
+line-height: 100%;
+letter-spacing: 0.03em; ;
+color:red;
+border-color: red;
+background-color: #fff;
+top:3621px;
+}
+.services {
+width: 1400px;
+height: 1844px;
+background-color: #000;
+display: flex;
+flex-direction: column;
+justify-content: flex-end; /* прижимаем подпункты вниз */
+align-items: flex-start;
+gap: 60px;
+margin-top: 150px;
+padding-bottom: 80px;
+}
+.services__item {
+width: 1150px;
+margin: 0 auto;
+}
+.services__img {
+width: 1150px;
+height: 270px;
+object-fit: cover;
+display: block;
+}
+.services__text {
+margin-top: 12px;
+color: #fff;
+font-size: 18px;
+line-height: 1.3;
+text-align: left;
+}
+.banner2__img {
+width: 1400px;
+height: 717px;
+}
+.contacts{
+width: 24;
+height: 24;
+margin-top: 150px;
+margin-left: 120px;
+padding: 10px;
+}
+.cont{
+font-family: 'Raleway', sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+.number, .email{
+font-family: 'Raleway', sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 60px;
+line-height: 60px;
+letter-spacing: 0.03em;
+}
+.numeil{
+margin-top: 30px;
+margin-left: 0;
+}
+/* FOOTER */
+.foot {
+width: 100%;
+height: 300px;              /* высота черной панели */
+background-color: black;
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* верх и низ */
+align-items: center;
+padding: 40px 0;
+box-sizing: border-box;
+margin-top: 150px;
+}
+/* Меню в футере */
+.list {
+display: flex;
+flex-direction: row;
+margin-top: 60px;
+margin-bottom: 144px;
+margin-left: 470px;
+margin-right: 480px;
+gap: 40px;
+}
+.list p {
+color: white;
+font-size: 16px;
+text-transform: uppercase;
+cursor: pointer;
+margin: 0;
+opacity: 50%;
+}
+/* Надпись внизу */
+.footname p {
+color: white;
+font-size: 14px;
+margin: 0;
+}
+@media (max-width: 1024px) {
+    .header{display: flex; flex-direction: column; left: 0; width: 100%;}
+    .header__logo {width: 100px; height: 15px;}
+    .banner__img, .banner2__img, .projects__img, .services__img{width: 45%; height: 45%;}
+    .hero__title { font-size: 20px; }
+    .about__title, .projects__title { font-size: 16px; }
+    .about__text, .projects__text, .services__text { font-size: 10px; }
+    .projects__btn, .about__btn { font-size: 14px; }
+    .projects__btn_big { font-size: 16px; padding: 12px; }
+    .number, .email { font-size: 20px; }
+    .foot, .list{display: flex;flex-direction: column;align-items: start;}
+    
+    }
+
+@media (max-width: 768px) {
+    .hero__title { font-size: 28px; }
+    .header { flex-direction: column; align-items: start; gap: 10px; }
+    .header__nav { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+    .hero__title { font-size: 24px; }
+    .about__title, .projects__title { font-size: 18px; }
+    .about__text, .projects__text, .services__text { font-size: 13px; }
+    .projects__btn_big { font-size: 14px; padding: 10px; }
+    .number, .email { font-size: 18px; }
+    .header__nav { align-items: center; }
+}
