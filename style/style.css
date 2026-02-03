@@ -14,24 +14,37 @@ font-style: normal;
 body {
 font-family: 'Raleway', sans-serif;
 margin: 0;
-padding: 0;
-box-sizing: border-box;
+padding: 0;}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  flex-wrap: wrap;
+}
+
 /* ===== Header ===== */
 .header {
 display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #fff;
-width: 1151px;
-height: 25.18px;
-margin-left: 125px;
-margin-right: 124px;
-margin-top: 32.8px;
+max-width: 1151px;
+width: 100%;
+margin:0 auto;
 }
 .header__logo {
-width: 126.89px;
-height: 21.42px;
+max-width: 126.89px;
+width: 100%;
+max-height: 21.42px;
+height: 100%;
 }
 .header__nav {
 display: flex;
@@ -48,10 +61,10 @@ text-transform: uppercase;
 border: none;
 background-color: #fff;
 cursor: pointer;
-text-decoration: none; /* убрать подчеркивание */
-color: black;          /* цвет текста */
-display: inline-block; /* чтобы padding работал */
-padding: 5px 10px;     /* добавляем отступ */
+text-decoration: none; 
+color: black;          
+display: inline-block; 
+padding: 5px 10px;    
 transition: color 0.3s;
 }
 .header .header__nav .header__btn:hover {
@@ -77,6 +90,7 @@ height: 120px;
 .banner {
 position: relative;
 max-width: 1150px;
+width: 100%;
 margin-left: 125px;
 margin-top: 20px;
 }
@@ -180,7 +194,7 @@ height: 1844px;
 background-color: #000;
 display: flex;
 flex-direction: column;
-justify-content: flex-end; /* прижимаем подпункты вниз */
+justify-content: flex-end; 
 align-items: flex-start;
 gap: 60px;
 margin-top: 150px;
@@ -238,11 +252,11 @@ margin-left: 0;
 /* FOOTER */
 .foot {
 width: 100%;
-height: 300px;              /* высота черной панели */
+height: 300px;              
 background-color: black;
 display: flex;
 flex-direction: column;
-justify-content: space-between; /* верх и низ */
+justify-content: space-between; 
 align-items: center;
 padding: 40px 0;
 box-sizing: border-box;
@@ -271,32 +285,4 @@ opacity: 50%;
 color: white;
 font-size: 14px;
 margin: 0;
-}
-@media (max-width: 1024px) {
-    .header{display: flex; flex-direction: column; left: 0; width: 100%;}
-    .header__logo {width: 100px; height: 15px;}
-    .banner__img, .banner2__img, .projects__img, .services__img{width: 45%; height: 45%;}
-    .hero__title { font-size: 20px; }
-    .about__title, .projects__title { font-size: 16px; }
-    .about__text, .projects__text, .services__text { font-size: 10px; }
-    .projects__btn, .about__btn { font-size: 14px; }
-    .projects__btn_big { font-size: 16px; padding: 12px; }
-    .number, .email { font-size: 20px; }
-    .foot, .list{display: flex;flex-direction: column;align-items: start;}
-    
-    }
-
-@media (max-width: 768px) {
-    .hero__title { font-size: 28px; }
-    .header { flex-direction: column; align-items: start; gap: 10px; }
-    .header__nav { flex-direction: column; }
-}
-
-@media (max-width: 480px) {
-    .hero__title { font-size: 24px; }
-    .about__title, .projects__title { font-size: 18px; }
-    .about__text, .projects__text, .services__text { font-size: 13px; }
-    .projects__btn_big { font-size: 14px; padding: 10px; }
-    .number, .email { font-size: 18px; }
-    .header__nav { align-items: center; }
 }
