@@ -1,3 +1,7 @@
+
+.body_fixed{
+    overflow: hidden;
+}
 /* ===== Fonts ===== */
 @font-face {
 font-family: "Raleway";
@@ -27,8 +31,7 @@ padding: 0;}
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
-  flex-wrap: wrap;
-}
+  }
 
 /* ===== Header ===== */
 .header {
@@ -189,38 +192,179 @@ background-color: #fff;
 top:3621px;
 }
 .services {
-width: 1400px;
-height: 1844px;
-background-color: #000;
-display: flex;
-flex-direction: column;
-justify-content: flex-end; 
-align-items: flex-start;
-gap: 60px;
-margin-top: 150px;
-padding-bottom: 80px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  width: 100%;
+  margin: 150px auto 0;
+  background-color: #000;
+  padding: 60px;
+  }
+  
+  .head{
+    margin: 10px 90px;
+    padding: 20px;
+    color: #fff;
+  }
+.services__grid {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  max-width: 1400px;  
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 40px;
+    }
 .services__item {
-width: 1150px;
-margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
 }
+.services__image-wrapper {
+    position: relative;
+    height: 388px;
+}
+.image-container {
+    position: relative; 
+    width: 100%;
+    height: 388px;   
+    overflow: hidden; 
+}
+
 .services__img {
-width: 1150px;
-height: 270px;
-object-fit: cover;
-display: block;
+  width: 100%;
+  height: 100%;     
+  object-fit: cover;
+  display: block;
+}
+
+.price {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #AD1818;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 .services__text {
-margin-top: 12px;
-color: #fff;
-font-size: 18px;
-line-height: 1.3;
-text-align: left;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: left;
+}
+.services-btn {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto 0;
+  border-radius: 5px;
+  padding: 60px;
+  background-color: #AD1818;
+  font-size: 30px;
+  line-height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.popup_open{
+    opacity: 1;
+    visibility: visible;
+}
+.popup__content{
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    height: 300px;
+    max-height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 20px;
+}
+.popup__title{
+  display: flex;
+  justify-content: center;
+    margin-top: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.popup__title_second{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  }
+.pop__text{
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+
+}
+.popup__text{
+    box-sizing: border-box;
+    width: 90%;
+    margin:20px;
+    font-size: 15px;
+    line-height: 32px;
+    color: #3a3939;
+    border: none;
+    border-bottom: 2px solid darkgray;
+    }
+.input_txt{
+ border:none;
+  outline: none;
+ font-size: 15px;  
+}
+.popup__close-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' d='M6 6L18 18M18 6L6 18'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+     border: none;
+    background-color: rgb(240, 237, 237);
+    cursor: pointer;
+}
+
+::placeholder{
+  color: grey;
+  opacity: 0.1;
 }
 .banner2__img {
-width: 1400px;
-height: 717px;
+max-width: 1400px;
+width: 100%;
 }
+
+h2{
+    margin-top: 30px;
+}
+.review{
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 60px;
+    margin-bottom: 20px;
+    }
 .contacts{
 width: 24;
 height: 24;
@@ -285,4 +429,19 @@ opacity: 50%;
 color: white;
 font-size: 14px;
 margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+      
+  }
+}
+
+@media (max-width: 500px) {
+
+.header__nav{
+  display: none;
+}
 }
